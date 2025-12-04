@@ -1,0 +1,15 @@
+{
+  "app_name": "Football App",
+  "home": "Home",
+  "matches": "Matches",
+  "news": "News",
+  "settings": "Settings",
+
+  "today_matches": "Today's Matches",
+  "live_now": "Live Now",
+  "no_data": "No Data",
+
+  "language": "Language",
+  "dark_mode": "Dark Mode",
+  "light_mode": "Light Mode"
+}
