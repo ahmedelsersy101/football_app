@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:football_app/core/localization/app_localization.dart';
 import 'package:football_app/core/theme/app_theme.dart';
-import 'package:football_app/features/home_view.dart';
+import 'package:football_app/features/spalsh/spalsh_view.dart';
 
 void main() {
   runApp(const FootballApp());
@@ -48,7 +48,7 @@ class FootballApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system, // auto switching
 
-      home: const HomeView(),
+      home: const SplashView(),
     );
   }
 }
