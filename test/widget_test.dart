@@ -7,13 +7,45 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:football_app/features/onboarding/cubit/language_cubit.dart';
+import 'package:football_app/features/onboarding/cubit/leagues_cubit.dart';
+import 'package:football_app/features/onboarding/cubit/onboarding_cubit.dart';
+import 'package:football_app/features/onboarding/cubit/teams_cubit.dart';
+import 'package:football_app/features/onboarding/cubit/timezone_cubit.dart';
 import 'package:football_app/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Initialize LanguageCubit for testing
+    final languageCubit = LanguageCubit();
+    await languageCubit.initialize();
+
+    // Initialize TimezoneCubit for testing
+    final timezoneCubit = TimezoneCubit();
+    await timezoneCubit.initialize();
+
+    // Initialize LeaguesCubit for testing
+    final leaguesCubit = LeaguesCubit();
+    await leaguesCubit.initialize();
+
+    // Initialize TeamsCubit for testing
+    final teamsCubit = TeamsCubit();
+    await teamsCubit.initialize();
+
+    // Initialize OnboardingCubit for testing
+    final onboardingCubit = OnboardingCubit();
+    await onboardingCubit.initialize();
+
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const FootballApp());
+    await tester.pumpWidget(
+      FootballApp(
+        languageCubit: languageCubit,
+        timezoneCubit: timezoneCubit,
+        leaguesCubit: leaguesCubit,
+        teamsCubit: teamsCubit,
+        onboardingCubit: onboardingCubit,
+      ),
+    );
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

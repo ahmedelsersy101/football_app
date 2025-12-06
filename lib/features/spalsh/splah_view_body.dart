@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:football_app/features/home_view.dart';
+import 'package:football_app/features/onboarding/cubit/onboarding_cubit.dart';
+import 'package:football_app/features/onboarding/presentation/onboarding_choose_language.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -45,7 +48,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     );
 
     _animationController.forward();
-    navigateToHome();
+    navigateToNextScreen();
   }
 
   @override
@@ -83,12 +86,21 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     );
   }
 
-  void navigateToHome() {
+  void navigateToNextScreen() {
     Future.delayed(const Duration(seconds: 2), () {
       if (mounted) {
+        // Check if onboarding is completed
+        final onboardingCubit = context.read<OnboardingCubit>();
+        final isOnboardingCompleted = onboardingCubit.isCompleted;
+
+        // Navigate to appropriate screen
+        final destination = isOnboardingCompleted
+            ? const HomeView() // User has completed onboarding before
+            : const OnboardingChooseLanguage(); // First time user
+
         Navigator.of(context).pushReplacement(
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const HomeView(),
+            pageBuilder: (context, animation, secondaryAnimation) => destination,
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: Tween<double>(

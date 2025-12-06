@@ -11,5 +11,24 @@
 
   "language": "اللغة",
   "dark_mode": "الوضع الليلي",
-  "light_mode": "الوضع النهاري"
+  "light_mode": "الوضع النهاري",
+
+  "choose_language": "اختر اللغة",
+  "language_arabic": "العربية",
+  "language_english": "الإنجليزية",
+  "continue": "متابعة",
+  "select_your_language": "اختر لغتك المفضلة",
+
+  "choose_timezone": "اختر منطقتك الزمنية",
+  "select_your_timezone": "اختر منطقتك لعرض مواعيد المباريات",
+  "match_times_will_show": "ستظهر مواعيد المباريات بتوقيت",
+
+  "choose_leagues": "اختر الدوريات المفضلة",
+  "select_your_leagues": "اختر الدوريات والبطولات التي تريد متابعتها",
+  "selected_count": "تم اختيار",
+  "leagues": "دوري/دوريات",
+
+  "choose_teams": "اختر الفرق المفضلة",
+  "select_your_teams": "اختر الفرق التي تريد متابعتها",
+  "teams": "فريق/فرق"
 }

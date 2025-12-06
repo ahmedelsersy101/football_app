@@ -11,5 +11,24 @@
 
   "language": "Language",
   "dark_mode": "Dark Mode",
-  "light_mode": "Light Mode"
+  "light_mode": "Light Mode",
+
+  "choose_language": "Choose Language",
+  "language_arabic": "Arabic",
+  "language_english": "English",
+  "continue": "Continue",
+  "select_your_language": "Select Your Preferred Language",
+
+  "choose_timezone": "Choose Your Timezone",
+  "select_your_timezone": "Select your region to show match times",
+  "match_times_will_show": "Match times will be shown in",
+
+  "choose_leagues": "Choose Favorite Leagues",
+  "select_your_leagues": "Select leagues and tournaments you want to follow",
+  "selected_count": "Selected",
+  "leagues": "league(s)",
+
+  "choose_teams": "Choose Favorite Teams",
+  "select_your_teams": "Select teams you want to follow",
+  "teams": "team(s)"
 }
